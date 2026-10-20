@@ -1,0 +1,96 @@
+# ==============================================================================
+#  仓库根 .gitignore —— C:\Users\linzi\PycharmProjects
+#  单一仓库，包含三个子项目：MathHomework / PyClassTask / PythonProject
+#  规则对整棵目录树生效，无需在各子项目重复添加。
+# ==============================================================================
+
+# ---------------------------------------------------------------- Python 字节码
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+*.so
+.Python
+
+# ---------------------------------------------------------------- 虚拟环境
+# 每个子项目各有一个 .venv（约 1.1 万个文件，必须忽略）
+.venv/
+venv/
+env/
+ENV/
+.python-version
+pyvenv.cfg
+CACHEDIR.TAG
+
+# ---------------------------------------------------------------- PyInstaller 打包产物
+# MathHomework/build、MathHomework/dist 等，单个 exe 约 43 MB
+build/
+dist/
+*.manifest
+*.toc
+
+# ---------------------------------------------------------------- PyArmor 加密产物
+# MathHomework/.pyarmor/pack 约 61 MB（main.pkg 42 MB、PYZ-00.pyz 13 MB）
+.pyarmor/
+*.pkg
+*.pyz
+*.pyz.toc
+localpycs/
+pyarmor_runtime_*/
+pyarmor_runtime.*.pyd
+hook-pyarmor_runtime_*.py
+xref-*.html
+warn-*.txt
+
+# ---------------------------------------------------------------- PyCharm / JetBrains IDE
+# 这些文件含本机绝对路径和窗口布局，属于个人配置，不应进版本库
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# ---------------------------------------------------------------- VS Code
+.vscode/
+
+# ---------------------------------------------------------------- Jupyter Notebook
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ---------------------------------------------------------------- 测试 / 类型检查 / 覆盖率
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# ---------------------------------------------------------------- 环境变量与密钥（切勿提交）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------- 日志与临时文件
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*~
+
+# ---------------------------------------------------------------- 操作系统杂项
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
